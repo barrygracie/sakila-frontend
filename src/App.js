@@ -1,24 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import Quiz from './quiz';
+import Sidenav from './sidenav';
+import GuessCountry from './guessCountry';
+import GuessFilm from './guessFilm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     <Sidenav />
+      <GuessCountry />
+      <h1>Placeholder</h1>
+      <GuessFilm />
+    </>
+   
   );
 }
 
