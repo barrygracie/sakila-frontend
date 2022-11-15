@@ -17,11 +17,7 @@ function FilmComponent() {
         });
     };
 
-    return (
-        <div>{film.title}
-            
-
-        </div>
+    return (film        
     )
 }
 

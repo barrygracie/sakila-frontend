@@ -13,15 +13,11 @@ function CountryComponent() {
 
         CountryService.getCountry().then((response) => {
             setCountry(response.data)
-            console.log(response.data);
+            
         });
     };
 
-    return (
-        <div>Hello
-            
-
-        </div>
+    return (country  
     )
 }
 

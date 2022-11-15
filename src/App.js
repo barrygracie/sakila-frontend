@@ -14,11 +14,6 @@ function App() {
     <>
     <Sidenav />
     <Quiz />
-    <ActorComponent />
-    <FilmComponent />
-    <CountryComponent />
-
-    
 
   </>
    
