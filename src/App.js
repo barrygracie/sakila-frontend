@@ -2,17 +2,25 @@ import logo from './logo.svg';
 import './App.css';
 import Quiz from './quiz';
 import Sidenav from './sidenav';
-import GuessCountry from './guessCountry';
-import GuessFilm from './guessFilm';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import ActorComponent from './ActorComponent';
+import FilmComponent from './FilmComponent';
+import CountryComponent from './CountryComponent';
+
 
 function App() {
   return (
     <>
-     <Sidenav />
-      <GuessCountry />
-      <h1>Placeholder</h1>
-      <GuessFilm />
-    </>
+    <Sidenav />
+    <Quiz />
+    <ActorComponent />
+    <FilmComponent />
+    <CountryComponent />
+
+    
+
+  </>
    
   );
 }

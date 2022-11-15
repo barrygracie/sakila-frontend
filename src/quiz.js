@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
+
 export default function Quiz() {
+
 	const questions = [
 		{
-			questionText: 'What does HTML Stand for?',
+			questionText: 'Hello',
 			answerOptions: [
 				{ answerText: 'Hyper Teenage Mutant Lizards', isCorrect: false },
 				{ answerText: 'Hyper Text Messaging Language', isCorrect: false },
@@ -49,6 +51,7 @@ export default function Quiz() {
 			],
 		},
 	];
+	
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
@@ -90,3 +93,4 @@ export default function Quiz() {
 		</div>
 	);
 }
+
