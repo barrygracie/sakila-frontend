@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import Questions from './Questions';
 
+export default function Quiz(questions) {
 
-export default function Quiz() {
-
-	const questions = Questions();
 	
-
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);

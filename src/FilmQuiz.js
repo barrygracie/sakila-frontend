@@ -1,8 +1,14 @@
 import CountryComponent from "./CountryComponent";
 import FilmComponent from "./FilmComponent";
+import Quiz from "./quiz";
+
+	export default function FilmQuiz(){
+
+		return(Quiz(GenerateFQuiz()));
+	}
 
 
-export default function Questions(){
+ 	function GenerateFQuiz(){
 
 	
     const question1 = MakeFilmQuestion();
@@ -16,17 +22,19 @@ export default function Questions(){
     return(questions)
 }
 
-function MakeFilmQuestion(){
+	function MakeFilmQuestion(){
 	//need to change to one api call
 
-    const a = FilmComponent();
+    const allFilms = FilmComponent();
 
-	console.log(a);
+	const f1 = allFilms.slice(0,1).pop();
+
+	console.log(f1);
 
 	
     const question = [
 		{
-			questionText: 'a[0].title',
+			questionText: 'f1.title',
 			answerOptions: [
 				{ answerText: 'b.description', isCorrect: true },
 				{ answerText: 'c.description', isCorrect: false },
