@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const CountryURL = 'http://localhost:8080/home/randomCountry';
+const CountryURL = 'https://demo-1668596797552.azurewebsites.net/home/randomCountry';
 
 class CountryService{
     getCountry(){

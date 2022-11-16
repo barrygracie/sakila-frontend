@@ -13,7 +13,7 @@ function FilmComponent() {
 
         FilmService.getFilm().then((response) => {
             setFilm(response.data)
-            console.log(response.data);
+            
         });
     };
 

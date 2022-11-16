@@ -4,42 +4,42 @@ import FilmComponent from "./FilmComponent";
 
 export default function Questions(){
 
-	//need an error catch
-
-    const a = FilmComponent();
-	const b = FilmComponent();
-	const c = FilmComponent();
-	const d = FilmComponent();
 	
-
-	console.log(a.title);
-	console.log(b.title);
-	console.log(c.title);
-	console.log(d.title);
-
-    const question = [
-		{
-			questionText: a.title,
-			answerOptions: [
-				{ answerText: a.description, isCorrect: true },
-				{ answerText: b.description, isCorrect: false },
-				{ answerText: c.description, isCorrect: false },
-				{ answerText: d.description, isCorrect: false },
-			],
-		},
-	];
-
-	const questions = [...question,{
-		questionText: a.title,
-		answerOptions: [
-			{ answerText: a.description, isCorrect: true },
-			{ answerText: b.description, isCorrect: false },
-			{ answerText: c.description, isCorrect: false },
-			{ answerText: d.description, isCorrect: false },
-		],
-	}];
+    const question1 = MakeFilmQuestion();
+	const question2 = MakeFilmQuestion();
 
 
+	//need to rearrange answers------------------------------------
+
+	const questions = [...question1, question2];
 
     return(questions)
+}
+
+function MakeFilmQuestion(){
+	//need to change to one api call
+
+    const a = FilmComponent();
+
+	console.log(a);
+
+	
+    const question = [
+		{
+			questionText: 'a[0].title',
+			answerOptions: [
+				{ answerText: 'b.description', isCorrect: true },
+				{ answerText: 'c.description', isCorrect: false },
+				{ answerText: 'a.description', isCorrect: false },
+				{ answerText: 'a.description', isCorrect: false },
+			],
+		}
+	];
+
+	//need to check the sort
+
+	//question.answerOptions.sort(function(){return 0.5 - Math.random()});
+
+	return(question);
+
 }
