@@ -1,24 +1,10 @@
-import React, {useState, useEffect} from 'react'
 import CountryService from './CountryService';
 
-function CountryComponent() {
+async function countryComponent() {
 
-    const [country, setCountry] = useState([])
-
-    useEffect(() => {
-        getCountry()
-    }, [])
-
-    const getCountry = () => {
-
-        CountryService.getCountry().then((response) => {
-            setCountry(response.data)
-            
-        });
-    };
-
-    return (country  
-    )
+    const country = (await CountryService.getCountry()).data;
+    console.log(country);
+    return country;
 }
 
-export default CountryComponent
+export default countryComponent;

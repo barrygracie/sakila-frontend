@@ -1,24 +1,10 @@
-import React, {useState, useEffect} from 'react'
-import FilmService from './FilmService';
+import FilmService from "./FilmService";
 
-function FilmComponent() {
-
-    const [film, setFilm] = useState([])
-
-    useEffect(() => {
-        getFilm()
-    }, [])
-
-    const getFilm = () => {
-
-        FilmService.getFilm().then((response) => {
-            setFilm(response.data)
-            
-        });
-    };
-
-    return (film        
-    )
+async function filmComponent() {
+  
+  const film = (await FilmService.getFilm()).data;
+  console.log(film);
+  return film;
 }
 
-export default FilmComponent
+export default filmComponent;

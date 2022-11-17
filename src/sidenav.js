@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 
 export default function Sidenav(){
     return(
-        <div class="sidenav">
+        <div className="sidenav">
         <h2>Contents</h2>
-        <a href="#one">View Films</a>
-        <a href="#two">Guess The Film</a>
-        <a href="#three">Guess The Description</a>
-        <a href="#four">Guess the Country</a>
-        <a href="#five">Create an Actor</a>
+        <a href="#one">Film Title Quiz</a>
+        <a href="#two">Description Quiz</a>
+        <a href="#three">Geography Quiz</a>
         </div>
     );
 }

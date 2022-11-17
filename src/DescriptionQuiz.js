@@ -4,15 +4,15 @@ import Quiz from "./quiz";
 
 let questions = [];
 
-export default function FilmQuiz() {
+export default function DescriptionQuiz() {
   const [loading, setLoading] = useState(true);
-
+  
   useEffect(() => {
-    async function genFQuiz() {
-      questions = await generateFQuiz();
+    async function genDQuiz() {
+      questions = await generateDQuiz();
       setLoading(false);
     }
-    genFQuiz();
+    genDQuiz();
   }, []);
 
   if (loading) {
@@ -21,20 +21,20 @@ export default function FilmQuiz() {
   return <Quiz questions={questions} />;
 }
 
-async function generateFQuiz() {
+async function generateDQuiz() {
 
-  const question1 = await makeFilmQuestion();
-  const question2 = await makeFilmQuestion();
-  const question3 = await makeFilmQuestion();
-  const question4 = await makeFilmQuestion();
-  const question5 = await makeFilmQuestion();
+  const question1 = await makeDQuestion();
+  const question2 = await makeDQuestion();
+  const question3 = await makeDQuestion();
+  const question4 = await makeDQuestion();
+  const question5 = await makeDQuestion();
 
   const questions = [question1, question2, question3, question4, question5];
 
   return questions;
 }
 
-async function makeFilmQuestion() {
+async function makeDQuestion() {
 
   const allFilms = await filmComponent();
 
@@ -45,12 +45,12 @@ async function makeFilmQuestion() {
 
 
   const question = {
-    questionText: f1.title,
+    questionText: f1.description,
     answerOptions: [
-      { answerText: f1.description, isCorrect: true },
-      { answerText: f2.description, isCorrect: false },
-      { answerText: f3.description, isCorrect: false },
-      { answerText: f4.description, isCorrect: false },
+      { answerText: f1.title, isCorrect: true },
+      { answerText: f2.title, isCorrect: false },
+      { answerText: f3.title, isCorrect: false },
+      { answerText: f4.title, isCorrect: false },
     ],
   };
   

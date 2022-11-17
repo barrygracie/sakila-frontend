@@ -105,7 +105,7 @@ th, td {border: 1px solid black;}
 /*Styling for Quiz-----------------------------------------------------------------------*/
 
 .app {
-  background-color: #c5cadb;
+  background-color: #a9abb1;
   width: 700px;
   min-height: 200px;
   height: min-content;
@@ -114,7 +114,7 @@ th, td {border: 1px solid black;}
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-evenly;
-  margin:auto
+  margin:auto;
 }
 
 .score-section {
@@ -156,13 +156,13 @@ button {
   width: 100%;
   font-size: 16px;
   color: #ffffff;
-  background-color: #252d4a;
+  background-color: #1c1d20;
   border-radius: 15px;
   display: flex;
   padding: 5px;
   justify-content: flex-start;
   align-items: center;
-  border: 5px solid #234668;
+  border: 5px solid #dddddd;
   cursor: pointer;
 }
 
