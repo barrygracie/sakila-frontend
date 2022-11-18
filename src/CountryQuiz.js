@@ -43,6 +43,8 @@ async function makeCountryQuestion() {
   const c3 = allCountry.slice(2, 3).pop();
   const c4 = allCountry.slice(3, 4).pop();
 
+  console.log(c1);
+
   const randomIndex = Math.floor(Math.random() * c1.city.length);
 
   const city = c1.city[randomIndex];
